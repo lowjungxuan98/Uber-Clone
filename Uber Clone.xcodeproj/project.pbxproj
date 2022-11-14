@@ -13,6 +13,10 @@
 		543978D1292294AF0027962C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543978D0292294AF0027962C /* HomeView.swift */; };
 		543978D3292295180027962C /* UberMapViewRespresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543978D2292295180027962C /* UberMapViewRespresentable.swift */; };
 		543978D5292296FF0027962C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543978D4292296FF0027962C /* LocationManager.swift */; };
+		543978DC29229D960027962C /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543978DB29229D960027962C /* LocationSearchActivationView.swift */; };
+		543978DE29229ED40027962C /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543978DD29229ED40027962C /* MapViewActionButton.swift */; };
+		543978E029229FEB0027962C /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543978DF29229FEB0027962C /* LocationSearchView.swift */; };
+		543978E22922A1D30027962C /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543978E12922A1D30027962C /* LocationSearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		543978D0292294AF0027962C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		543978D2292295180027962C /* UberMapViewRespresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberMapViewRespresentable.swift; sourceTree = "<group>"; };
 		543978D4292296FF0027962C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		543978DB29229D960027962C /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
+		543978DD29229ED40027962C /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
+		543978DF29229FEB0027962C /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		543978E12922A1D30027962C /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,17 +115,61 @@
 		543978CF292294A30027962C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				543978D0292294AF0027962C /* HomeView.swift */,
-				543978D2292295180027962C /* UberMapViewRespresentable.swift */,
+				543978D729229D1F0027962C /* LocationSearch */,
+				543978D629229D100027962C /* Home */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		543978D629229D100027962C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				543978CE2922949C0027962C /* ViewModel */,
+				543978D829229D410027962C /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		543978D729229D1F0027962C /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				543978DA29229D760027962C /* ViewModel */,
+				543978D929229D710027962C /* View */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		543978D829229D410027962C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				543978D0292294AF0027962C /* HomeView.swift */,
+				543978D2292295180027962C /* UberMapViewRespresentable.swift */,
+				543978DD29229ED40027962C /* MapViewActionButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543978D929229D710027962C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				543978DB29229D960027962C /* LocationSearchActivationView.swift */,
+				543978DF29229FEB0027962C /* LocationSearchView.swift */,
+				543978E12922A1D30027962C /* LocationSearchResultCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		543978DA29229D760027962C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		54B2F3E2292293C500A25364 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				543978CF292294A30027962C /* View */,
-				543978CE2922949C0027962C /* ViewModel */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -199,10 +251,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543978E029229FEB0027962C /* LocationSearchView.swift in Sources */,
 				543978D5292296FF0027962C /* LocationManager.swift in Sources */,
+				543978DE29229ED40027962C /* MapViewActionButton.swift in Sources */,
 				543978D3292295180027962C /* UberMapViewRespresentable.swift in Sources */,
 				542BD5B829229343007D4B18 /* Uber_CloneApp.swift in Sources */,
 				543978D1292294AF0027962C /* HomeView.swift in Sources */,
+				543978DC29229D960027962C /* LocationSearchActivationView.swift in Sources */,
+				543978E22922A1D30027962C /* LocationSearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
