@@ -12,6 +12,7 @@ import SwiftUI
 struct UberMapViewRepresentable: UIViewRepresentable {
     let mapView = MKMapView()
     let locationManager = LocationManager()
+    @StateObject var locationViewModel = LocationSearchViewModel()
 
     func makeUIView(context: Context) -> some UIView {
         mapView.delegate = context.coordinator
@@ -21,7 +22,9 @@ struct UberMapViewRepresentable: UIViewRepresentable {
         return mapView
     }
 
-    func updateUIView(_ uiView: UIViewType, context: Context) {}
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
 
     func makeCoordinator() -> MapCoordinator {
         return MapCoordinator(parent: self)
