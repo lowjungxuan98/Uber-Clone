@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var mapState = MapViewState.noInput
+    @EnvironmentObject var viewModel: LocationSearchViewModel
     var body: some View {
-        ZStack(alignment:.bottom) {
+        ZStack(alignment: .bottom) {
             ZStack(alignment: .top) {
                 UberMapViewRepresentable(mapState: $mapState)
                     .ignoresSafeArea()
@@ -31,13 +32,18 @@ struct HomeView: View {
                     .padding(.leading)
                     .padding(.top, 4)
             }
-            
+
             if mapState == .locationSelected {
                 RideRequestView()
                     .transition(.move(edge: .bottom))
             }
         }
         .edgesIgnoringSafeArea(.bottom)
+        .onReceive(LocationManager.shared.$userLocation) { location in
+            if let location = location {
+                viewModel.userLocation = location
+            }
+        }
     }
 }
 
