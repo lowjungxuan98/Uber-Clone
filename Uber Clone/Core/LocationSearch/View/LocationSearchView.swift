@@ -37,7 +37,6 @@ struct LocationSearchView: View {
                         .frame(height: 32)
                         .background(Color(.systemGray4))
                         .padding(.trailing)
-                        
                 }
             }
             .padding(.leading)
@@ -53,8 +52,10 @@ struct LocationSearchView: View {
                         ForEach(viewModel.results, id: \.self) { result in
                             LocationSearchResultCell(title: result.title, subtitle: result.subtitle)
                                 .onTapGesture {
-                                    viewModel.selectLocation(result)
-                                    mapState = .locationSelected
+                                    withAnimation(.spring()) {
+                                        viewModel.selectLocation(result)
+                                        mapState = .locationSelected
+                                    }
                                 }
                         }
                     }
